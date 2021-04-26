@@ -1,0 +1,75 @@
+// Fonts
+$roboto: "Roboto", sans-serif;
+$raleway: "Raleway", sans-serif;
+// COLORS VARIABLES
+$blue: #4361ee;
+$blue-light: #dce3ff;
+$black: #000000;
+$white: #ffffff;
+
+// media query size
+$sm: 600px;
+
+// media query
+@mixin sm {
+  @media screen and (max-width: $sm) {
+    @content;
+  }
+}
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $roboto;
+
+  overflow-x: hidden !important;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: bold;
+  font-family: $raleway;
+  @include sm {
+    font-size: 30px;
+  }
+}
+h2 {
+  font-family: $raleway;
+  font-size: 34px;
+  font-weight: bold;
+}
+h6 {
+  font-weight: bold;
+}
+p {
+  font-weight: 400;
+  font-size: 18px;
+}
+i {
+  color: $blue;
+}
+a {
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.2s all;
+  color: $blue;
+  &:hover {
+    color: $black;
+    text-decoration: none;
+  }
+}
+.btn-blue {
+  border-radius: 25px;
+  padding: 10px 20px;
+  color: $white;
+  background-color: $blue;
+  &:hover {
+    background-color: $blue-light;
+    color: $black;
+  }
+}
